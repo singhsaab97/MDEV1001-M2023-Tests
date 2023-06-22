@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Musicians View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MusiciansViewController" id="BYZ-38-t0r" customClass="MusiciansViewController" customModule="MDEV1001_M2023_MidSemesterTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-gP-oTy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uOI-L8-FhX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="e6d-aU-EEU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xdc-gP-oTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dhL-tk-G4i"/>
+                            <constraint firstAttribute="bottom" secondItem="Xdc-gP-oTy" secondAttribute="bottom" id="ofY-3m-EVu"/>
+                            <constraint firstItem="Xdc-gP-oTy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tx5-aN-clf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xdc-gP-oTy" secondAttribute="trailing" id="vtZ-lF-9UG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Xdc-gP-oTy" id="AlK-qV-kRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.58015267175573" y="23.943661971830988"/>
+        </scene>
+        <!--Add Edit Musician View Controller-->
+        <scene sceneID="NSp-ts-mY0">
+            <objects>
+                <viewController storyboardIdentifier="AddEditMusicianViewController" id="qaW-cf-cKV" customClass="AddEditMusicianViewController" customModule="MDEV1001_M2023_MidSemesterTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4rw-e1-dew">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UaQ-6v-va8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qaW-cf-cKV" id="Q49-Te-FCn"/>
+                                    <outlet property="delegate" destination="qaW-cf-cKV" id="N6H-hH-Kjo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="llU-5q-b2y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="llU-5q-b2y" firstAttribute="trailing" secondItem="UaQ-6v-va8" secondAttribute="trailing" id="SPr-4c-5Cx"/>
+                            <constraint firstAttribute="bottom" secondItem="UaQ-6v-va8" secondAttribute="bottom" id="mp6-ah-gAe"/>
+                            <constraint firstItem="UaQ-6v-va8" firstAttribute="top" secondItem="llU-5q-b2y" secondAttribute="top" id="s23-yp-Oek"/>
+                            <constraint firstItem="UaQ-6v-va8" firstAttribute="leading" secondItem="llU-5q-b2y" secondAttribute="leading" id="zQV-fg-VbM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="UaQ-6v-va8" id="80N-ak-efZ"/>
+                        <outlet property="tableViewBottomConstraint" destination="mp6-ah-gAe" id="U2U-zR-xdn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aoe-9c-Jws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829.7709923664122" y="23.943661971830988"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="PosterCollectionViewCell" customModule="MDEV1001_M2023_UIForLocalDataAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlc-SD-E3l">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uP-yl-UN6">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="PosterCollectionViewCell"/>
+            <constraints>
+                <constraint firstItem="1uP-yl-UN6" firstAttribute="top" secondItem="zlc-SD-E3l" secondAttribute="top" id="1GA-9j-mCu"/>
+                <constraint firstItem="zlc-SD-E3l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9jT-p8-Xdg"/>
+                <constraint firstItem="1uP-yl-UN6" firstAttribute="bottom" secondItem="zlc-SD-E3l" secondAttribute="bottom" id="C3C-uX-zGV"/>
+                <constraint firstItem="1uP-yl-UN6" firstAttribute="leading" secondItem="zlc-SD-E3l" secondAttribute="leading" id="D1R-ip-liR"/>
+                <constraint firstItem="zlc-SD-E3l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZZM-w9-qiz"/>
+                <constraint firstItem="1uP-yl-UN6" firstAttribute="trailing" secondItem="zlc-SD-E3l" secondAttribute="trailing" id="ZlF-Hh-maB"/>
+                <constraint firstAttribute="bottom" secondItem="zlc-SD-E3l" secondAttribute="bottom" id="teo-OI-wKI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zlc-SD-E3l" secondAttribute="trailing" id="zpI-uE-6G9"/>
+            </constraints>
+            <connections>
+                <outlet property="highlightingView" destination="1uP-yl-UN6" id="1Xz-gn-iNR"/>
+                <outlet property="posterImageView" destination="zlc-SD-E3l" id="AM0-Oj-fZO"/>
+            </connections>
+            <point key="canvasLocation" x="8" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
