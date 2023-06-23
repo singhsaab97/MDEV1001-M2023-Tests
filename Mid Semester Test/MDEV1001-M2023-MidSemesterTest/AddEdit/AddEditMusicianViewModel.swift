@@ -108,6 +108,7 @@ extension AddEditMusicianViewModel {
     
     func doneButtonTapped() {
         guard validateMusicianEntry() else { return }
+        guard validateActiveYears() else { return }
         switch self.mode {
         case .add:
             guard !(listener?.doesMusicianExist(updatedMusician) ?? false) else {
@@ -223,6 +224,25 @@ private extension AddEditMusicianViewModel {
         return true
     }
     
+    func validateActiveYears() -> Bool {
+        // Validate start year and end year
+        let startYear = updatedMusician.startYear
+        let endYear = updatedMusician.endYear
+        if startYear == nil && endYear == nil {
+            return true
+        } else if startYear != nil && endYear == nil {
+            return showError(for: .endYear)
+        } else if startYear == nil && endYear != nil {
+            return showError(for: .startYear)
+        } else if let startYear = startYear,
+                  let endYear = endYear {
+            guard endYear <= startYear else { return true }
+            showToast(with: Constants.activeYearsErrorMessage)
+            return false
+        }
+        return true
+    }
+    
     func showError(for field: Field) -> Bool {
         showToast(with: field.errorMessage)
         return false
@@ -254,29 +274,39 @@ extension AddEditMusicianViewModel: PostersListCellListener {
 extension AddEditMusicianViewModel: AddEditMusicianCellListener {
     
     func musicianFieldUpdated(_ field: Field, with text: String?, formatter: DateFormatter?) {
-        guard let text = text else { return }
         switch field {
         case .name:
+            guard let text = text else { return }
             updatedMusician.fullName = text
         case .genres:
+            guard let text = text else { return }
             updatedMusician.genres = text
         case .instruments:
+            guard let text = text else { return }
             updatedMusician.instruments = text
         case .labels:
+            guard let text = text else { return }
             updatedMusician.labels = text
         case .dob:
+            guard let text = text else { return }
             updatedMusician.dob = formatter?.date(from: text)?.timeIntervalSince1970
         case .startYear:
+            let text = text ?? String()
             updatedMusician.startYear = Int(text)
         case .endYear:
+            let text = text ?? String()
             updatedMusician.endYear = Int(text)
         case .spouses:
+            guard let text = text else { return }
             updatedMusician.spouses = text
         case .kids:
+            guard let text = text else { return }
             updatedMusician.kids = text
         case .relatives:
+            guard let text = text else { return }
             updatedMusician.relatives = text
         case .works:
+            guard let text = text else { return }
             updatedMusician.works = text
         }
     }

@@ -58,6 +58,7 @@ struct Constants {
     static let dobFieldPlaceholder = "DOB"
     static let startYearFieldPlaceholder = "Debut year"
     static let endYearFieldPlaceholder = "Retirement year"
+    static let activeYearsErrorMessage = "Retirement year should be greater than debut year"
     static let spousesFieldPlaceholder = "Spouses"
     static let kidsFieldPlaceholder = "Children"
     static let relativesFieldPlaceholder = "Relatives"
