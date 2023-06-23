@@ -276,16 +276,12 @@ extension AddEditMusicianViewModel: AddEditMusicianCellListener {
     func musicianFieldUpdated(_ field: Field, with text: String?, formatter: DateFormatter?) {
         switch field {
         case .name:
-            guard let text = text else { return }
             updatedMusician.fullName = text
         case .genres:
-            guard let text = text else { return }
             updatedMusician.genres = text
         case .instruments:
-            guard let text = text else { return }
             updatedMusician.instruments = text
         case .labels:
-            guard let text = text else { return }
             updatedMusician.labels = text
         case .dob:
             guard let text = text else { return }
@@ -297,16 +293,12 @@ extension AddEditMusicianViewModel: AddEditMusicianCellListener {
             let text = text ?? String()
             updatedMusician.endYear = Int(text)
         case .spouses:
-            guard let text = text else { return }
             updatedMusician.spouses = text
         case .kids:
-            guard let text = text else { return }
             updatedMusician.kids = text
         case .relatives:
-            guard let text = text else { return }
             updatedMusician.relatives = text
         case .works:
-            guard let text = text else { return }
             updatedMusician.works = text
         }
     }
