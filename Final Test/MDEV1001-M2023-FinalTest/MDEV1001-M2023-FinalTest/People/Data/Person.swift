@@ -12,12 +12,18 @@ struct Person: Codable, Equatable {
     var name: String
     var occupation: String
     var nationality: String
-    var birthDate: String
+    var birthDate: TimeInterval?
     var birthPlace: String
-    var bio: String
+    var bio: String?
     var achievements: [String]
     var image: String?
     var isExpanded: Bool = false
+    
+    var birthYear: Int {
+        guard let birthDate = birthDate else { return 0 }
+        let date = Date(timeIntervalSince1970: birthDate)
+        return Calendar.current.component(.year, from: date)
+    }
     
     var imageUrl: URL? {
         guard let image = image else { return nil }
@@ -45,7 +51,7 @@ extension Person {
             name: String(),
             occupation: String(),
             nationality: String(),
-            birthDate: String(),
+            birthDate: nil,
             birthPlace: String(),
             bio: String(),
             achievements: []
