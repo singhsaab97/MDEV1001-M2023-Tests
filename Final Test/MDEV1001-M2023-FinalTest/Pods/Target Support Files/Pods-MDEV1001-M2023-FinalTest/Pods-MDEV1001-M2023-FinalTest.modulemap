@@ -1,0 +1,6 @@
+framework module Pods_MDEV1001_M2023_FinalTest {
+  umbrella header "Pods-MDEV1001-M2023-FinalTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

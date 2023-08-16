@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Albert Einstein",
+        "occupation": "Theoretical Physicist",
+        "nationality": "German",
+        "birth_date": "March 14, 1879",
+        "birth_place": "Ulm, Germany",
+        "bio": "Albert Einstein was a renowned physicist known for his theory of relativity. He made significant contributions to our understanding of the universe.",
+        "achievements": ["Nobel Prize in Physics (1921)", "E=mc² equation"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
+    },
+    {
+        "name": "Marie Curie",
+        "occupation": "Physicist and Chemist",
+        "nationality": "Polish",
+        "birth_date": "November 7, 1867",
+        "birth_place": "Warsaw, Poland",
+        "bio": "Marie Curie was a pioneering scientist in the field of radioactivity. Her groundbreaking research paved the way for important advancements in science and medicine.",
+        "achievements": ["Nobel Prizes in Physics (1903) and Chemistry (1911)", "Isolated radium and polonium"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Mariecurie.jpg"
+    },
+    {
+        "name": "Nelson Mandela",
+        "occupation": "Anti-Apartheid Activist and Politician",
+        "nationality": "South African",
+        "birth_date": "July 18, 1918",
+        "birth_place": "Mvezo, South Africa",
+        "bio": "Nelson Mandela played a key role in ending apartheid and became the first black president of South Africa. His tireless efforts for justice and equality inspired the world.",
+        "achievements": ["Nobel Peace Prize (1993)", "Long Walk to Freedom autobiography"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Nelson_Mandela.jpg"
+    },
+    {
+        "name": "Coco Chanel",
+        "occupation": "Fashion Designer",
+        "nationality": "French",
+        "birth_date": "August 19, 1883",
+        "birth_place": "Saumur, France",
+        "bio": "Coco Chanel revolutionized women's fashion with her elegant and timeless designs. Her influence on style continues to be felt to this day.",
+        "achievements": ["Founder of Chanel brand", "Introduced the little black dress"],
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Chanel.JPG?20100416024834"
+    },
+    {
+        "name": "Mahatma Gandhi",
+        "occupation": "Political and Spiritual Leader",
+        "nationality": "Indian",
+        "birth_date": "October 2, 1869",
+        "birth_place": "Porbandar, India",
+        "bio": "Mahatma Gandhi led India to independence through nonviolent civil disobedience. His principles of truth and nonviolence remain powerful beacons for justice.",
+        "achievements": ["Leader of Indian Independence Movement", "Salt March protest"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Mohandas_K._Gandhi%2C_portrait.jpg/882px-Mohandas_K._Gandhi%2C_portrait.jpg?20131231064320"
+    },
+    {
+        "name": "Leonardo da Vinci",
+        "occupation": "Renaissance Polymath",
+        "nationality": "Italian",
+        "birth_date": "April 15, 1452",
+        "birth_place": "Anchiano, Italy",
+        "bio": "Leonardo da Vinci was a painter, scientist, and inventor known for his diverse talents. His works continue to captivate and inspire people around the world.",
+        "achievements": ["Mona Lisa painting", "Conceptualized flying machines"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Leonardo_self.jpg?20101125233908"
+    },
+    {
+        "name": "Amelia Earhart",
+        "occupation": "Aviator",
+        "nationality": "American",
+        "birth_date": "July 24, 1897",
+        "birth_place": "Atchison, Kansas, USA",
+        "bio": "Amelia Earhart was a pioneering aviator and the first woman to fly solo across the Atlantic Ocean. Her courage and determination shattered gender barriers in aviation.",
+        "achievements": ["First woman to fly solo across the Atlantic", "Set numerous aviation records"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Amelia_Earhart_1928.jpg?20141123194232"
+    },
+    {
+        "name": "Winston Churchill",
+        "occupation": "Politician and Statesman",
+        "nationality": "British",
+        "birth_date": "November 30, 1874",
+        "birth_place": "Woodstock, England",
+        "bio": "Winston Churchill was the British Prime Minister during World War II and a skilled orator. His leadership and eloquence rallied the nation in its darkest hours.",
+        "achievements": ["Led Britain during World War II", "Nobel Prize in Literature (1953)"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sir_Winston_Churchill_-_19086236948.jpg/941px-Sir_Winston_Churchill_-_19086236948.jpg"
+    },
+    {
+        "name": "Frida Kahlo",
+        "occupation": "Painter",
+        "nationality": "Mexican",
+        "birth_date": "July 6, 1907",
+        "birth_place": "Coyoacán, Mexico",
+        "bio": "Frida Kahlo's artwork was known for its unique style and exploration of identity. Her powerful self-portraits and emotional depth continue to captivate art lovers.",
+        "achievements": ["Iconic self-portraits", "Contributions to Mexican art movement"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg/800px-Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg?20140507125905"
+    },
+    {
+        "name": "Steve Jobs",
+        "occupation": "Entrepreneur",
+        "nationality": "American",
+        "birth_date": "February 24, 1955",
+        "birth_place": "San Francisco, California, USA",
+        "bio": "Steve Jobs co-founded Apple Inc. and played a key role in the development of personal computers and technology. His vision transformed the way we interact with technology.",
+        "achievements": ["Co-founder of Apple Inc.", "Revolutionized consumer electronics"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Steve_Jobs.jpg/822px-Steve_Jobs.jpg?20090223024859"
+    }
+]
