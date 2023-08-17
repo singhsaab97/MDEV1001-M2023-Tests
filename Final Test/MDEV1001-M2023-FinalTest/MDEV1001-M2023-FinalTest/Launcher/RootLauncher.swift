@@ -23,14 +23,11 @@ final class RootLauncher {
 extension RootLauncher {
     
     func launch() {
-        let viewController = PeopleViewController.loadFromStoryboard()
-        let viewModel = PeopleViewModel(listener: nil)
+        let viewController = AuthenticationViewController.loadFromStoryboard()
+        let viewModel = AuthenticationViewModel(flow: .signIn, listener: self)
         viewController.viewModel = viewModel
         viewModel.presenter = viewController
-        let navigationController = viewController.embeddedInNavigationController
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.navigationBar.isTranslucent = true
-        window?.rootViewController = navigationController
+        window?.rootViewController = viewController.embeddedInNavigationController
         window?.makeKeyAndVisible()
     }
     
@@ -41,12 +38,14 @@ private extension RootLauncher {
     
     func setup() {
         FirebaseApp.configure()
-        setTintColor()
+        setPrimaryColor()
         setUserInterfaceStyle(with: UserDefaults.userInterfaceStyle)
     }
     
-    func setTintColor() {
-        UINavigationBar.appearance().tintColor = .systemPink
+    func setPrimaryColor() {
+        UINavigationBar.appearance().tintColor = .systemIndigo
+        UIButton.appearance().tintColor = .systemIndigo
+        UITextField.appearance().tintColor = .systemIndigo
     }
     
     func setUserInterfaceStyle(with style: UIUserInterfaceStyle) {
@@ -56,13 +55,13 @@ private extension RootLauncher {
 }
 
 // MARK: - AuthenticationListener Methods
-//extension RootLauncher: AuthenticationListener {
-//
-//    func changeTheme(to style: UIUserInterfaceStyle) {
-//        guard let view = window else { return }
-//        UIView.transition(with: view, duration: Constants.animationDuration) { [weak self] in
-//            self?.setUserInterfaceStyle(with: style)
-//        }
-//    }
-//
-//}
+extension RootLauncher: AuthenticationListener {
+
+    func changeTheme(to style: UIUserInterfaceStyle) {
+        guard let view = window else { return }
+        UIView.transition(with: view, duration: Constants.animationDuration) { [weak self] in
+            self?.setUserInterfaceStyle(with: style)
+        }
+    }
+
+}

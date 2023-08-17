@@ -81,7 +81,7 @@ extension Toastable {
         var bottomInset = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
         bottomInset = bottomInset.isZero ? 20 : bottomInset
         view.bottomAnchor.constraint(equalTo: window.bottomAnchor, constant: -bottomInset).isActive = true
-        view.widthAnchor.constraint(lessThanOrEqualTo: window.widthAnchor, constant: 40).isActive = true
+        view.widthAnchor.constraint(lessThanOrEqualTo: window.widthAnchor, constant: -40).isActive = true
         view.centerXAnchor.constraint(equalTo: window.centerXAnchor).isActive = true
         // Animate
         UIView.animate(withDuration: Constants.animationDuration) { [weak view] in

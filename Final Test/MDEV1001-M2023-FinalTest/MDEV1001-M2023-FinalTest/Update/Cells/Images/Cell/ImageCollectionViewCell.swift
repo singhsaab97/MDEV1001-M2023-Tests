@@ -28,7 +28,7 @@ final class ImageCollectionViewCell: UICollectionViewCell,
 extension ImageCollectionViewCell {
     
     func configure(with viewModel: ImageCellViewModelable) {
-        let color = viewModel.isSelected ? UIColor.systemPink : UIColor.clear
+        let color = viewModel.isSelected ? UIColor.systemIndigo : UIColor.clear
         layer.borderColor = color.cgColor
         highlightingView.backgroundColor = color
         personImageView.sd_setImage(with: viewModel.imageUrl)

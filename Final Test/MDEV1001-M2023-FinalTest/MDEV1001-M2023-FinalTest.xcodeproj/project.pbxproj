@@ -35,6 +35,9 @@
 		7C002C5C2A8DA24800727395 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C5B2A8DA24800727395 /* ImageCellViewModel.swift */; };
 		7C002C5F2A8DB03700727395 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C5E2A8DB03700727395 /* ToastView.swift */; };
 		7C002C612A8DB07000727395 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C002C602A8DB07000727395 /* ToastView.xib */; };
+		7C002C652A8DBF9400727395 /* UsersDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C642A8DBF9400727395 /* UsersDataHandler.swift */; };
+		7C002C672A8DBFA100727395 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C662A8DBFA100727395 /* AuthenticationViewController.swift */; };
+		7C002C692A8DBFAC00727395 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C682A8DBFAC00727395 /* AuthenticationViewModel.swift */; };
 		7CAFB40B2A8CA04C00D68F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAFB40A2A8CA04C00D68F98 /* AppDelegate.swift */; };
 		7CAFB40D2A8CA04C00D68F98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAFB40C2A8CA04C00D68F98 /* SceneDelegate.swift */; };
 		7CAFB4122A8CA04C00D68F98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAFB4102A8CA04C00D68F98 /* Main.storyboard */; };
@@ -75,6 +78,9 @@
 		7C002C5B2A8DA24800727395 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
 		7C002C5E2A8DB03700727395 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		7C002C602A8DB07000727395 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
+		7C002C642A8DBF9400727395 /* UsersDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataHandler.swift; sourceTree = "<group>"; };
+		7C002C662A8DBFA100727395 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		7C002C682A8DBFAC00727395 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		7CAFB4072A8CA04C00D68F98 /* MDEV1001-M2023-FinalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDEV1001-M2023-FinalTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAFB40A2A8CA04C00D68F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CAFB40C2A8CA04C00D68F98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +212,24 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		7C002C622A8DBF7A00727395 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C662A8DBFA100727395 /* AuthenticationViewController.swift */,
+				7C002C682A8DBFAC00727395 /* AuthenticationViewModel.swift */,
+				7C002C632A8DBF8700727395 /* Data */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		7C002C632A8DBF8700727395 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C642A8DBF9400727395 /* UsersDataHandler.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		7CAFB3FE2A8CA04C00D68F98 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				7CAFB41F2A8CA1C900D68F98 /* Launcher */,
+				7C002C622A8DBF7A00727395 /* Authentication */,
 				7CAFB4202A8CA1E000D68F98 /* People */,
 				7C002C3F2A8D54E400727395 /* Update */,
 				7C002C5D2A8DB02200727395 /* Toast */,
@@ -408,6 +433,7 @@
 				7C002C252A8D367900727395 /* Constants.swift in Sources */,
 				7C002C5C2A8DA24800727395 /* ImageCellViewModel.swift in Sources */,
 				7C002C502A8D58BE00727395 /* ImagesListCellViewModel.swift in Sources */,
+				7C002C672A8DBFA100727395 /* AuthenticationViewController.swift in Sources */,
 				7C002C2E2A8D3D6F00727395 /* Array+Extensions.swift in Sources */,
 				7C002C2B2A8D38A200727395 /* PeopleViewController.swift in Sources */,
 				7C002C3D2A8D408700727395 /* PersonCellViewModel.swift in Sources */,
@@ -419,6 +445,7 @@
 				7C002C412A8D551A00727395 /* AddEditPersonViewModel.swift in Sources */,
 				7C002C272A8D36FA00727395 /* Protocols.swift in Sources */,
 				7C002C5F2A8DB03700727395 /* ToastView.swift in Sources */,
+				7C002C692A8DBFAC00727395 /* AuthenticationViewModel.swift in Sources */,
 				7C002C292A8D389700727395 /* PeopleViewModel.swift in Sources */,
 				7C002C562A8D98E300727395 /* AddEditPersonCellViewModel.swift in Sources */,
 				7C002C462A8D583400727395 /* StretchyTableHeaderView.swift in Sources */,
@@ -427,6 +454,7 @@
 				7C002C342A8D3DB500727395 /* UserDefaults+Extensions.swift in Sources */,
 				7C002C4D2A8D58A900727395 /* ImagesListTableViewCell.swift in Sources */,
 				7C002C3A2A8D403E00727395 /* PersonTableViewCell.swift in Sources */,
+				7C002C652A8DBF9400727395 /* UsersDataHandler.swift in Sources */,
 				7C002C232A8D364A00727395 /* RootLauncher.swift in Sources */,
 				7C002C432A8D552F00727395 /* AddEditPersonViewController.swift in Sources */,
 			);
