@@ -19,8 +19,8 @@ struct Person: Codable, Equatable {
     var image: String?
     var isExpanded: Bool = false
     
-    var birthYear: Int {
-        guard let birthDate = birthDate else { return 0 }
+    var birthYear: Int? {
+        guard let birthDate = birthDate else { return nil }
         let date = Date(timeIntervalSince1970: birthDate)
         return Calendar.current.component(.year, from: date)
     }
@@ -46,8 +46,9 @@ struct Person: Codable, Equatable {
 // MARK: - Exposed Helpers
 extension Person {
     
-    static var emptyObject: Person {
+    static func createObject(with documentId: String) -> Person {
         return Person(
+            documentId: documentId,
             name: String(),
             occupation: String(),
             nationality: String(),

@@ -9,6 +9,7 @@ import Foundation
 
 protocol PersonCellViewModelable {
     var person: Person { get }
+    var birthYear: String { get }
     var state: PersonCellViewModel.YearState { get }
 }
 
@@ -35,11 +36,21 @@ final class PersonCellViewModel: PersonCellViewModelable {
     
 }
 
+// MARK: - Exposed Helpers
+extension PersonCellViewModel {
+    
+    var birthYear: String {
+        guard let year = person.birthYear else { return Constants.na }
+        return String(year)
+    }
+    
+}
+
 // MARK: - Private Helpers
 private extension PersonCellViewModel {
     
     func setYearState() {
-        let year = person.birthYear
+        guard let year = person.birthYear else { return }
         if year <= Constants.pre1850Period {
             state = .pre1850
         } else if year <= Constants.pre1870Period {

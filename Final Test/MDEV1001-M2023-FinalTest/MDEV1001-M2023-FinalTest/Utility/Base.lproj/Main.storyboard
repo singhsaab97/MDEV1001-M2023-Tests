@@ -48,6 +48,41 @@
             </objects>
             <point key="canvasLocation" x="2" y="4"/>
         </scene>
+        <!--Add Edit Person View Controller-->
+        <scene sceneID="Rxj-Ms-Z8z">
+            <objects>
+                <viewController storyboardIdentifier="AddEditPersonViewController" id="5lS-hZ-djE" customClass="AddEditPersonViewController" customModule="MDEV1001_M2023_FinalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l6N-as-4Qr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UfF-lJ-ZYU">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5lS-hZ-djE" id="oW3-Hr-WO6"/>
+                                    <outlet property="delegate" destination="5lS-hZ-djE" id="Ajw-8N-YpX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="16K-tE-Mv8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="16K-tE-Mv8" firstAttribute="trailing" secondItem="UfF-lJ-ZYU" secondAttribute="trailing" id="1T4-lP-qWe"/>
+                            <constraint firstItem="UfF-lJ-ZYU" firstAttribute="leading" secondItem="16K-tE-Mv8" secondAttribute="leading" id="Bcg-JE-jNj"/>
+                            <constraint firstItem="UfF-lJ-ZYU" firstAttribute="top" secondItem="16K-tE-Mv8" secondAttribute="top" id="Ic6-Kl-B4R"/>
+                            <constraint firstAttribute="bottom" secondItem="UfF-lJ-ZYU" secondAttribute="bottom" id="ckl-Re-lUz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="UfF-lJ-ZYU" id="rcc-qg-C3P"/>
+                        <outlet property="tableViewBottomConstraint" destination="ckl-Re-lUz" id="Hm1-z6-Fdk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxd-Zg-iJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

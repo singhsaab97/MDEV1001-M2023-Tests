@@ -26,11 +26,11 @@ struct Constants {
 //    static let authenticationViewController = String(describing: AuthenticationViewController.self)
     static let peopleViewController = String(describing: PeopleViewController.self)
     static let personCell = String(describing: PersonTableViewCell.self)
-//    static let addEditMovieViewController = String(describing: AddEditMovieViewController.self)
-//    static let addEditMovieCell = String(describing: AddEditMovieTableViewCell.self)
-//    static let postersListCell = String(describing: PostersListTableViewCell.self)
-//    static let posterCell = String(describing: PosterCollectionViewCell.self)
-//    static let toastView = String(describing: ToastView.self)
+    static let addEditPersonController = String(describing: AddEditPersonViewController.self)
+    static let addEditPersonCell = String(describing: AddEditPersonTableViewCell.self)
+    static let imagesListCell = String(describing: ImagesListTableViewCell.self)
+    static let imageCell = String(describing: ImageCollectionViewCell.self)
+    static let toastView = String(describing: ToastView.self)
     
     static let signUpTitle = "Create account"
     static let signUpSubtitle = "Please fill your details in the form below"
@@ -51,9 +51,10 @@ struct Constants {
     static let authenticationFailedMessage = "Authentication failed"
     
     static let peopleViewControllerTitle = "Favourite People"
+    static let na = "N/A"
     static let edit = "Edit"
     static let delete = "Delete"
-    static let editMovie = "Edit Movie"
+    static let editPerson = "Edit Person"
     static let addPerson = "Add Person"
     static let personNameFieldPlaceholder = "Name"
     static let personOccupationFieldPlaceholder = "Occupation"

@@ -41,11 +41,11 @@ private extension RootLauncher {
     
     func setup() {
         FirebaseApp.configure()
-        setTintColors()
+        setTintColor()
         setUserInterfaceStyle(with: UserDefaults.userInterfaceStyle)
     }
     
-    func setTintColors() {
+    func setTintColor() {
         UINavigationBar.appearance().tintColor = .systemPink
     }
     

@@ -69,33 +69,32 @@ extension ViewLoadable where Self: UICollectionViewCell {
 extension Toastable {
     
     func showToast(with message: String) {
-        // TODO
-//        guard let window = UIApplication.shared.windows.first,
-//              !window.subviews.contains(where: { $0 is ToastView }) else { return }
+        guard let window = UIApplication.shared.windows.first,
+              !window.subviews.contains(where: { $0 is ToastView }) else { return }
         // Don't add another toast if one already exists
-//        let view = ToastView.loadFromNib()
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        view.setMessage(message)
-//        view.layer.cornerRadius = 12
-//        view.alpha = .zero
-//        window.addSubview(view)
-//        var bottomInset = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
-//        bottomInset = bottomInset.isZero ? 20 : bottomInset
-//        view.bottomAnchor.constraint(equalTo: window.bottomAnchor, constant: -bottomInset).isActive = true
-//        view.widthAnchor.constraint(lessThanOrEqualTo: window.widthAnchor, constant: 40).isActive = true
-//        view.centerXAnchor.constraint(equalTo: window.centerXAnchor).isActive = true
-//        // Animate
-//        UIView.animate(withDuration: Constants.animationDuration) { [weak view] in
-//            view?.alpha = 1
-//            // Disapeear after a few seconds
-//            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.toastDisplayDuration) { [weak view] in
-//                UIView.animate(withDuration: Constants.animationDuration) { [weak view] in
-//                    view?.alpha = .zero
-//                } completion: { [weak view] _ in
-//                    view?.removeFromSuperview()
-//                }
-//            }
-//        }
+        let view = ToastView.loadFromNib()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setMessage(message)
+        view.layer.cornerRadius = 12
+        view.alpha = .zero
+        window.addSubview(view)
+        var bottomInset = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+        bottomInset = bottomInset.isZero ? 20 : bottomInset
+        view.bottomAnchor.constraint(equalTo: window.bottomAnchor, constant: -bottomInset).isActive = true
+        view.widthAnchor.constraint(lessThanOrEqualTo: window.widthAnchor, constant: 40).isActive = true
+        view.centerXAnchor.constraint(equalTo: window.centerXAnchor).isActive = true
+        // Animate
+        UIView.animate(withDuration: Constants.animationDuration) { [weak view] in
+            view?.alpha = 1
+            // Disapeear after a few seconds
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.toastDisplayDuration) { [weak view] in
+                UIView.animate(withDuration: Constants.animationDuration) { [weak view] in
+                    view?.alpha = .zero
+                } completion: { [weak view] _ in
+                    view?.removeFromSuperview()
+                }
+            }
+        }
     }
     
 }

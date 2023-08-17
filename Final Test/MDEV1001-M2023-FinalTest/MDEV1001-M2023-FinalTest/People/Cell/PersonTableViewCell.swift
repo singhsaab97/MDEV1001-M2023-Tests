@@ -34,7 +34,7 @@ extension PersonTableViewCell {
     func configure(with viewModel: PersonCellViewModelable) {
         yearContainerView.backgroundColor = viewModel.state.color.withAlphaComponent(0.6)
         yearContainerView.layer.borderColor = viewModel.state.color.cgColor
-        yearLabel.text = String(viewModel.person.birthYear)
+        yearLabel.text = viewModel.birthYear
         nameLabel.text = viewModel.person.name
         occupationLabel.text = viewModel.person.occupation
         let imageUrl = viewModel.person.imageUrl
@@ -72,7 +72,7 @@ private extension PersonCellViewModel.YearState {
         case .current:
             return .systemGreen
         case .unknown:
-            return .clear
+            return .systemGray
         }
     }
     

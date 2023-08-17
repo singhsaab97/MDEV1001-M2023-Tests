@@ -67,7 +67,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bkN-PK-Dmb">
                                         <rect key="frame" x="324" y="0.0" width="71" height="71"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="bkN-PK-Dmb" secondAttribute="height" id="88y-q9-pA2"/>
+                                            <constraint firstAttribute="width" secondItem="bkN-PK-Dmb" secondAttribute="height" priority="999" id="88y-q9-pA2"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>

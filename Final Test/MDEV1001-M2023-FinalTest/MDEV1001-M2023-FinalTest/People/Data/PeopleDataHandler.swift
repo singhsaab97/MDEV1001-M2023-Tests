@@ -52,8 +52,9 @@ extension PeopleDataHandler {
     }
     
     func addPerson(_ person: Person, completion: @escaping PeopleDefaultCompletion) {
+        guard let documentId = person.documentId else { return }
         do {
-            try collection.addDocument(from: person) { error in
+            try collection.document(documentId).setData(from: person) { error in
                 completion(error?.localizedDescription)
             }
         } catch {

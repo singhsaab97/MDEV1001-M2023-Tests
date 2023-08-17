@@ -46,7 +46,8 @@ protocol PeopleViewModelable {
     func trailingSwipedPerson(at indexPath: IndexPath) -> UISwipeActionsConfiguration
 }
 
-final class PeopleViewModel: PeopleViewModelable {
+final class PeopleViewModel: PeopleViewModelable,
+                             Toastable {
     
     private var people: [Person]
     private weak var listener: PeopleListener?
@@ -101,7 +102,7 @@ extension PeopleViewModel {
     }
     
     func addButtonTapped() {
-//        showAddEditViewController(for: .add(id: movies.count + 1))
+        showAddEditViewController(for: .add(documentId: UUID().uuidString))
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> PersonCellViewModelable? {
@@ -154,43 +155,42 @@ private extension PeopleViewModel {
                 self?.presenter?.reloadSections(IndexSet(integer: 0))
                 return
             }
-            // TODO
-//            self?.showToast(with: error)
+            self?.showToast(with: error)
         }
     }
     
     func editPerson(at indexPath: IndexPath) {
-//        guard let movie = movies[safe: indexPath.row] else { return }
-//        showAddEditViewController(for: .edit(movie: movie))
+        guard let person = people[safe: indexPath.row] else { return }
+        showAddEditViewController(for: .edit(person: person))
     }
     
     func deletePerson(at indexPath: IndexPath) {
         // Delete Person
-//        guard let movie = movies[safe: indexPath.row],
-//              let documentId = movie.documentId,
-//              let index = movies.firstIndex(of: movie) else { return }
-//        let alertTitle = "\(Constants.delete) \"\(movie.title)\"?"
-//        prepareDeleteAlert(with: alertTitle) { [weak self] in
-//            MoviesDataHandler.instance.deleteMovie(at: documentId) { [weak self] error in
-//                let indexPath = IndexPath(row: index, section: 0)
-//                self?.movies.remove(at: index)
-//                self?.presenter?.deleteRows(at: [indexPath])
-//            }
-//        }
+        guard let person = people[safe: indexPath.row],
+              let documentId = person.documentId,
+              let index = people.firstIndex(of: person) else { return }
+        let alertTitle = "\(Constants.delete) \"\(person.name)\"?"
+        prepareDeleteAlert(with: alertTitle) { [weak self] in
+            PeopleDataHandler.instance.deletePerson(at: documentId) { [weak self] error in
+                let indexPath = IndexPath(row: index, section: 0)
+                self?.people.remove(at: index)
+                self?.presenter?.deleteRows(at: [indexPath])
+            }
+        }
     }
     
-//    func showAddEditViewController(for mode: AddEditMovieViewModel.Mode) {
-//        let posters = UserDefaults.availableImages.map { $0.toUrl }
-//        let viewModel = AddEditMovieViewModel(
-//            mode: mode,
-//            posters: posters,
-//            listener: self
-//        )
-//        let viewController = AddEditMovieViewController.loadFromStoryboard()
-//        viewController.viewModel = viewModel
-//        viewModel.presenter = viewController
-//        presenter?.push(viewController)
-//    }
+    func showAddEditViewController(for mode: AddEditPersonViewModel.Mode) {
+        let images = UserDefaults.availableImages.map { $0.toUrl }
+        let viewModel = AddEditPersonViewModel(
+            mode: mode,
+            images: images,
+            listener: self
+        )
+        let viewController = AddEditPersonViewController.loadFromStoryboard()
+        viewController.viewModel = viewModel
+        viewModel.presenter = viewController
+        presenter?.push(viewController)
+    }
     
     func scroll(to indexPath: IndexPath) {
         DispatchQueue.main.async { [weak self] in
@@ -242,55 +242,53 @@ private extension PeopleViewModel {
     
 }
 
-// MARK: - AddEditMovieListener Methods
-//extension PeopleViewModel: AddEditMovieListener {
-//
-//    func addNewMovie(_ movie: Movie?) {
-//        // Add movie
-//        guard let movie = movie else { return }
-//        MoviesDataHandler.instance.addMovie(movie) { [weak self] error in
-//            guard let self = self else { return }
-//            guard let error = error else {
-//                let indexPath = IndexPath(row: self.movies.count, section: 0)
-//                self.movies.append(movie)
-//                self.presenter?.insertRows(at: [indexPath])
-//                self.scroll(to: indexPath)
-//                return
-//            }
-//            self.showToast(with: error)
-//        }
-//    }
-//
-//    func updateMovie(_ movie: Movie, with updatedMovie: Movie?) {
-//        // Update movie
-//        guard let documentId = movie.documentId,
-//              let movie = updatedMovie else { return }
-//        MoviesDataHandler.instance.updateMovie(at: documentId, with: movie) { [weak self] error in
-//            guard let error = error else {
-//                if let index = self?.movies.firstIndex(where: { $0.documentId == movie.documentId }) {
-//                    let indexPath = IndexPath(row: index, section: 0)
-//                    self?.movies[index] = movie
-//                    self?.presenter?.reloadRows(at: [indexPath])
-//                    self?.scroll(to: indexPath)
-//                }
-//                return
-//            }
-//            self?.showToast(with: error)
-//        }
-//    }
-//
-//    func doesMovieExist(_ movie: Movie?) -> Bool {
-//        return movies.contains(where: {
-//            return $0.title == movie?.title
-//                && $0.studio == movie?.studio
-//                && $0.year == movie?.year
-//                && $0.runtime == movie?.runtime
-//                && $0.criticsRating == movie?.criticsRating
-//                && $0.poster == movie?.poster
-//        })
-//    }
-//
-//}
+// MARK: - AddEditPersonListener Methods
+extension PeopleViewModel: AddEditPersonListener {
+
+    func addNewPerson(_ person: Person?) {
+        // Add person
+        guard let person = person else { return }
+        PeopleDataHandler.instance.addPerson(person) { [weak self] error in
+            guard let self = self else { return }
+            guard let error = error else {
+                let indexPath = IndexPath(row: self.people.count, section: 0)
+                self.people.append(person)
+                self.presenter?.insertRows(at: [indexPath])
+                self.scroll(to: indexPath)
+                return
+            }
+            self.showToast(with: error)
+        }
+    }
+
+    func updatePerson(_ person: Person, with updatedPerson: Person?) {
+        // Update person
+        guard let documentId = person.documentId,
+              let person = updatedPerson else { return }
+        PeopleDataHandler.instance.updatePerson(at: documentId, with: person) { [weak self] error in
+            guard let error = error else {
+                if let index = self?.people.firstIndex(where: { $0.documentId == person.documentId }) {
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self?.people[index] = person
+                    self?.presenter?.reloadRows(at: [indexPath])
+                    self?.scroll(to: indexPath)
+                }
+                return
+            }
+            self?.showToast(with: error)
+        }
+    }
+
+    func doesPersonExist(_ person: Person?) -> Bool {
+        return people.contains(where: {
+            return $0.name == person?.name
+                && $0.occupation == person?.occupation
+                && $0.nationality == person?.nationality
+                && $0.image == person?.image
+        })
+    }
+
+}
 
 // MARK: - UIUserInterfaceStyle Helpers
 extension UIUserInterfaceStyle {

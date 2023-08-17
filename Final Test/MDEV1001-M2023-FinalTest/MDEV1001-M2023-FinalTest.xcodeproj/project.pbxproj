@@ -21,6 +21,20 @@
 		7C002C3A2A8D403E00727395 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C382A8D403E00727395 /* PersonTableViewCell.swift */; };
 		7C002C3B2A8D403E00727395 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C002C392A8D403E00727395 /* PersonTableViewCell.xib */; };
 		7C002C3D2A8D408700727395 /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C3C2A8D408700727395 /* PersonCellViewModel.swift */; };
+		7C002C412A8D551A00727395 /* AddEditPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C402A8D551A00727395 /* AddEditPersonViewModel.swift */; };
+		7C002C432A8D552F00727395 /* AddEditPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C422A8D552F00727395 /* AddEditPersonViewController.swift */; };
+		7C002C462A8D583400727395 /* StretchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C452A8D583400727395 /* StretchyTableHeaderView.swift */; };
+		7C002C4D2A8D58A900727395 /* ImagesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C4B2A8D58A900727395 /* ImagesListTableViewCell.swift */; };
+		7C002C4E2A8D58A900727395 /* ImagesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C002C4C2A8D58A900727395 /* ImagesListTableViewCell.xib */; };
+		7C002C502A8D58BE00727395 /* ImagesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C4F2A8D58BE00727395 /* ImagesListCellViewModel.swift */; };
+		7C002C532A8D98D600727395 /* AddEditPersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C512A8D98D600727395 /* AddEditPersonTableViewCell.swift */; };
+		7C002C542A8D98D600727395 /* AddEditPersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C002C522A8D98D600727395 /* AddEditPersonTableViewCell.xib */; };
+		7C002C562A8D98E300727395 /* AddEditPersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C552A8D98E300727395 /* AddEditPersonCellViewModel.swift */; };
+		7C002C592A8DA23C00727395 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C572A8DA23C00727395 /* ImageCollectionViewCell.swift */; };
+		7C002C5A2A8DA23C00727395 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C002C582A8DA23C00727395 /* ImageCollectionViewCell.xib */; };
+		7C002C5C2A8DA24800727395 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C5B2A8DA24800727395 /* ImageCellViewModel.swift */; };
+		7C002C5F2A8DB03700727395 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C002C5E2A8DB03700727395 /* ToastView.swift */; };
+		7C002C612A8DB07000727395 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C002C602A8DB07000727395 /* ToastView.xib */; };
 		7CAFB40B2A8CA04C00D68F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAFB40A2A8CA04C00D68F98 /* AppDelegate.swift */; };
 		7CAFB40D2A8CA04C00D68F98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAFB40C2A8CA04C00D68F98 /* SceneDelegate.swift */; };
 		7CAFB4122A8CA04C00D68F98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAFB4102A8CA04C00D68F98 /* Main.storyboard */; };
@@ -47,6 +61,20 @@
 		7C002C382A8D403E00727395 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		7C002C392A8D403E00727395 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		7C002C3C2A8D408700727395 /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
+		7C002C402A8D551A00727395 /* AddEditPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPersonViewModel.swift; sourceTree = "<group>"; };
+		7C002C422A8D552F00727395 /* AddEditPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPersonViewController.swift; sourceTree = "<group>"; };
+		7C002C452A8D583400727395 /* StretchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyTableHeaderView.swift; sourceTree = "<group>"; };
+		7C002C4B2A8D58A900727395 /* ImagesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListTableViewCell.swift; sourceTree = "<group>"; };
+		7C002C4C2A8D58A900727395 /* ImagesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesListTableViewCell.xib; sourceTree = "<group>"; };
+		7C002C4F2A8D58BE00727395 /* ImagesListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCellViewModel.swift; sourceTree = "<group>"; };
+		7C002C512A8D98D600727395 /* AddEditPersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPersonTableViewCell.swift; sourceTree = "<group>"; };
+		7C002C522A8D98D600727395 /* AddEditPersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEditPersonTableViewCell.xib; sourceTree = "<group>"; };
+		7C002C552A8D98E300727395 /* AddEditPersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPersonCellViewModel.swift; sourceTree = "<group>"; };
+		7C002C572A8DA23C00727395 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		7C002C582A8DA23C00727395 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		7C002C5B2A8DA24800727395 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
+		7C002C5E2A8DB03700727395 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		7C002C602A8DB07000727395 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
 		7CAFB4072A8CA04C00D68F98 /* MDEV1001-M2023-FinalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDEV1001-M2023-FinalTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAFB40A2A8CA04C00D68F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CAFB40C2A8CA04C00D68F98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +138,74 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7C002C3F2A8D54E400727395 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C422A8D552F00727395 /* AddEditPersonViewController.swift */,
+				7C002C402A8D551A00727395 /* AddEditPersonViewModel.swift */,
+				7C002C442A8D580E00727395 /* Header */,
+				7C002C472A8D585E00727395 /* Cells */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		7C002C442A8D580E00727395 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C452A8D583400727395 /* StretchyTableHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		7C002C472A8D585E00727395 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C482A8D586600727395 /* Images */,
+				7C002C492A8D586D00727395 /* Field */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7C002C482A8D586600727395 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C4B2A8D58A900727395 /* ImagesListTableViewCell.swift */,
+				7C002C4F2A8D58BE00727395 /* ImagesListCellViewModel.swift */,
+				7C002C4C2A8D58A900727395 /* ImagesListTableViewCell.xib */,
+				7C002C4A2A8D589300727395 /* Cell */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7C002C492A8D586D00727395 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C512A8D98D600727395 /* AddEditPersonTableViewCell.swift */,
+				7C002C552A8D98E300727395 /* AddEditPersonCellViewModel.swift */,
+				7C002C522A8D98D600727395 /* AddEditPersonTableViewCell.xib */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
+		7C002C4A2A8D589300727395 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C572A8DA23C00727395 /* ImageCollectionViewCell.swift */,
+				7C002C5B2A8DA24800727395 /* ImageCellViewModel.swift */,
+				7C002C582A8DA23C00727395 /* ImageCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7C002C5D2A8DB02200727395 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				7C002C5E2A8DB03700727395 /* ToastView.swift */,
+				7C002C602A8DB07000727395 /* ToastView.xib */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		7CAFB3FE2A8CA04C00D68F98 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +229,8 @@
 			children = (
 				7CAFB41F2A8CA1C900D68F98 /* Launcher */,
 				7CAFB4202A8CA1E000D68F98 /* People */,
+				7C002C3F2A8D54E400727395 /* Update */,
+				7C002C5D2A8DB02200727395 /* Toast */,
 				7C002C2C2A8D3D3E00727395 /* Extensions */,
 				7CAFB4212A8CA1EE00D68F98 /* Utility */,
 				7CAFB4272A8D20D300D68F98 /* GoogleService-Info.plist */,
@@ -244,11 +342,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C002C542A8D98D600727395 /* AddEditPersonTableViewCell.xib in Resources */,
 				7CAFB4242A8CA20D00D68F98 /* People.json in Resources */,
 				7CAFB4172A8CA04D00D68F98 /* LaunchScreen.storyboard in Resources */,
 				7C002C3B2A8D403E00727395 /* PersonTableViewCell.xib in Resources */,
+				7C002C612A8DB07000727395 /* ToastView.xib in Resources */,
+				7C002C4E2A8D58A900727395 /* ImagesListTableViewCell.xib in Resources */,
 				7CAFB4142A8CA04D00D68F98 /* Assets.xcassets in Resources */,
 				7CAFB4282A8D20D300D68F98 /* GoogleService-Info.plist in Resources */,
+				7C002C5A2A8DA23C00727395 /* ImageCollectionViewCell.xib in Resources */,
 				7CAFB4122A8CA04C00D68F98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,19 +406,29 @@
 			files = (
 				7C002C302A8D3D7F00727395 /* String+Extensions.swift in Sources */,
 				7C002C252A8D367900727395 /* Constants.swift in Sources */,
+				7C002C5C2A8DA24800727395 /* ImageCellViewModel.swift in Sources */,
+				7C002C502A8D58BE00727395 /* ImagesListCellViewModel.swift in Sources */,
 				7C002C2E2A8D3D6F00727395 /* Array+Extensions.swift in Sources */,
 				7C002C2B2A8D38A200727395 /* PeopleViewController.swift in Sources */,
 				7C002C3D2A8D408700727395 /* PersonCellViewModel.swift in Sources */,
 				7CAFB4262A8CA24300D68F98 /* Person.swift in Sources */,
+				7C002C532A8D98D600727395 /* AddEditPersonTableViewCell.swift in Sources */,
 				7CAFB40B2A8CA04C00D68F98 /* AppDelegate.swift in Sources */,
 				7C002C362A8D3E3D00727395 /* PeopleDataHandler.swift in Sources */,
 				7C002C322A8D3D8C00727395 /* UIViewController+Extensions.swift in Sources */,
+				7C002C412A8D551A00727395 /* AddEditPersonViewModel.swift in Sources */,
 				7C002C272A8D36FA00727395 /* Protocols.swift in Sources */,
+				7C002C5F2A8DB03700727395 /* ToastView.swift in Sources */,
 				7C002C292A8D389700727395 /* PeopleViewModel.swift in Sources */,
+				7C002C562A8D98E300727395 /* AddEditPersonCellViewModel.swift in Sources */,
+				7C002C462A8D583400727395 /* StretchyTableHeaderView.swift in Sources */,
+				7C002C592A8DA23C00727395 /* ImageCollectionViewCell.swift in Sources */,
 				7CAFB40D2A8CA04C00D68F98 /* SceneDelegate.swift in Sources */,
 				7C002C342A8D3DB500727395 /* UserDefaults+Extensions.swift in Sources */,
+				7C002C4D2A8D58A900727395 /* ImagesListTableViewCell.swift in Sources */,
 				7C002C3A2A8D403E00727395 /* PersonTableViewCell.swift in Sources */,
 				7C002C232A8D364A00727395 /* RootLauncher.swift in Sources */,
+				7C002C432A8D552F00727395 /* AddEditPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
